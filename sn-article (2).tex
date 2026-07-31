@@ -1,0 +1,802 @@
+%Version 3.1 December 2024
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%=========================================================================================%%
+%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
+%%=========================================================================================%%
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-chicago.bst%  
+ 
+%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
+%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{array}%
+\usepackage{longtable}%
+\usepackage{booktabs}%
+\usepackage{multirow}%
+\usepackage{tabularx}%
+\usepackage{graphicx}%%
+\usepackage{subcaption}%
+\usepackage{float}%
+\usepackage{hyperref}%
+\usepackage{xurl}%
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Artificial Intelligence in Smart Agriculture]
+{Artificial Intelligence in Smart Agriculture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AUTHORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author*[1]{\fnm{To Van} \sur{Huong}}
+
+\affil*[1]{%
+\orgdiv{Faculty of Information Technology},
+\orgname{Can Tho University},
+\orgaddress{
+\street{3/2 Street},
+\city{Can Tho},
+\postcode{900000},
+\country{Vietnam}}}
+
+\email{your_email@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{
+
+Artificial Intelligence has become one of the fastest growing technologies in agriculture \cite{journal1,journal2,conf1,book1}. AI techniques such as machine learning, deep learning, computer vision, and the Internet of Things enable farmers to monitor crops, detect diseases, predict yields, optimize irrigation, and improve farming efficiency.
+
+This paper introduces the basic concepts of Artificial Intelligence in Smart Agriculture. Several common AI applications are presented together with mathematical formulas, tables, figures, algorithms, and references to demonstrate the basic features of LaTeX. The paper also discusses the advantages and challenges of applying AI in agriculture and provides an overview of future research directions.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% KEYWORDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{
+Artificial Intelligence,
+Machine Learning,
+Deep Learning,
+Smart Agriculture,
+Internet of Things
+}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Artificial Intelligence (AI) is changing traditional agriculture into a smart farming system. AI helps farmers make better decisions by analyzing agricultural data collected from sensors, drones, satellites, and mobile devices.
+
+Nowadays, agriculture faces many challenges including climate change, water shortages, plant diseases, labor shortages, and increasing food demand. Traditional farming methods are no longer sufficient to solve these problems efficiently. Therefore, AI has become an important technology for improving agricultural productivity and sustainability.
+
+Machine learning models can analyze historical data to predict crop yields and weather conditions. Deep learning techniques can detect diseases from crop images with high accuracy. Computer vision systems allow automatic monitoring of plant growth, while autonomous robots perform harvesting and weed removal.
+
+Smart agriculture combines AI with IoT devices to collect real-time information from farms. Farmers can monitor soil moisture, temperature, humidity, and crop health using mobile applications connected to cloud platforms.
+
+The purpose of this paper is to introduce the basic concepts of Artificial Intelligence in Smart Agriculture while demonstrating common LaTeX formatting techniques including text formatting, equations, tables, figures, references, algorithms, and bibliography.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Applications of Artificial Intelligence in Agriculture}
+
+\label{sec:application}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Artificial Intelligence has been widely applied in agricultural production.
+
+Some common applications include:
+
+\begin{itemize}
+
+\item Crop disease detection
+
+\item Smart irrigation
+
+\item Yield prediction
+
+\item Weed detection
+
+\item Autonomous agricultural robots
+
+\item Precision farming
+
+\end{itemize}
+
+AI systems reduce labor costs and improve crop quality by analyzing agricultural data automatically.
+
+Computer vision techniques recognize diseases from leaf images.
+
+Machine learning algorithms predict weather conditions and crop productivity.
+
+IoT sensors continuously collect environmental information including soil moisture, humidity, temperature, and sunlight intensity.
+
+These technologies help farmers make better decisions and reduce unnecessary fertilizer and pesticide usage.
+
+Many recent studies have successfully applied AI to disease detection
+\cite{journal5,journal8,conf3,book5}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Basic Text Formatting}
+\label{sec:format}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bold Text}
+
+\textbf{Artificial Intelligence improves agricultural productivity.}
+
+\subsection{Italic Text}
+
+\textit{Machine learning models analyze agricultural data efficiently.}
+
+\subsection{Underline Text}
+
+\underline{Deep learning is widely used for image classification.}
+
+\subsection{Different Font Sizes}
+
+{\LARGE This is LARGE text.}
+
+\vspace{0.2cm}
+
+{\Large This is Large text.}
+
+\vspace{0.2cm}
+
+{\large This is large text.}
+
+\vspace{0.2cm}
+
+Normal text.
+
+\vspace{0.2cm}
+
+{\small This is small text.}
+
+\vspace{0.2cm}
+
+{\footnotesize This is footnote size text.}
+
+\subsection{Line Break}
+
+First line.\\
+Second line.\\
+Third line.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List Demonstration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This section demonstrates two common list environments in LaTeX.
+
+\subsection{Bullet List}
+
+The following are common applications of Artificial Intelligence in agriculture.
+
+\begin{itemize}
+
+\item Crop disease detection
+
+\item Yield prediction
+
+\item Smart irrigation
+
+\item Weather forecasting
+
+\item Agricultural robots
+
+\end{itemize}
+
+\subsection{Numbered List}
+
+The following steps describe a simple AI workflow.
+
+\begin{enumerate}
+
+\item Collect agricultural data
+
+\item Clean and preprocess the data
+
+\item Train the AI model
+
+\item Evaluate the model
+
+\item Deploy the model
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical Formulas}
+\label{sec:formula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Mathematical equations are commonly used in Artificial Intelligence.
+
+\subsection{Single Equation}
+
+The classification accuracy is calculated using Equation~\ref{eq:accuracy}.
+
+\begin{equation}
+Accuracy=\frac{TP+TN}{TP+TN+FP+FN}
+\label{eq:accuracy}
+\end{equation}
+
+where
+
+\begin{itemize}
+
+\item $TP$ = True Positive
+
+\item $TN$ = True Negative
+
+\item $FP$ = False Positive
+
+\item $FN$ = False Negative
+
+\end{itemize}
+
+
+\subsection{Two Equations}
+
+Equation~\ref{eq:two} illustrates a simple linear equation system.
+
+\begin{equation}
+\left\{
+\begin{aligned}
+x+y &=10\\
+2x-y &=5
+\end{aligned}
+\right.
+\label{eq:two}
+\end{equation}
+
+
+\subsection{Three Equations}
+
+\begin{equation}
+\left\{
+\begin{aligned}
+x+y+z &=12\\
+2x-y+z &=7\\
+x+2y-z &=4
+\end{aligned}
+\right.
+\label{eq:three}
+\end{equation}
+
+where
+
+\[
+x,y,z
+\]
+
+represent unknown variables.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cross References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+LaTeX automatically numbers figures, tables, equations and sections.
+
+For example,
+
+Equation~\ref{eq:accuracy} presents the accuracy formula.
+
+Equation~\ref{eq:two} presents a system with two equations.
+
+Equation~\ref{eq:three} presents a system with three equations.
+
+Section~\ref{sec:application} introduces common AI applications.
+
+Section~\ref{sec:formula} presents mathematical equations.
+
+Later, Figure~\ref{fig:architecture} and Table~\ref{tab:five} will also be referenced automatically.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables}
+\label{sec:table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This section demonstrates different types of tables in LaTeX.
+
+Table~\ref{tab:two} is a simple two-column table.
+
+Table~\ref{tab:five} is a five-column table.
+
+Table~\ref{tab:ten} is a ten-column table.
+
+Table~\ref{tab:long} demonstrates a long table with repeated headers.
+
+
+\subsection{Two-column Table}
+
+\begin{table}[h]
+\centering
+\caption{Common AI Applications}
+\label{tab:two}
+
+\begin{tabular}{|c|p{8cm}|}
+\hline
+
+Application & Description\\
+
+\hline
+
+Disease Detection &
+Detect plant diseases using image processing.\\
+
+\hline
+
+Yield Prediction &
+Predict crop production using AI models.\\
+
+\hline
+
+Smart Irrigation &
+Automatically control irrigation systems.\\
+
+\hline
+
+\end{tabular}
+
+\end{table}
+
+\subsection{Five-column Table}
+
+\begin{table}[h]
+
+\centering
+
+\caption{Comparison of AI Models}
+
+\label{tab:five}
+
+\begin{tabular}{|c|c|c|c|c|}
+
+\hline
+
+Model & Accuracy & Precision & Recall & F1-score\\
+
+\hline
+
+CNN & 94 & 93 & 92 & 92\\
+
+\hline
+
+ResNet & 96 & 95 & 95 & 95\\
+
+\hline
+
+EfficientNet & 98 & 98 & 97 & 97\\
+
+\hline
+
+YOLO & 97 & 96 & 97 & 96\\
+
+\hline
+
+\end{tabular}
+
+\end{table}
+
+
+
+\subsection{Ten-column Table}
+
+\begin{table}[h]
+
+\centering
+
+\caption{Agricultural Sensor Data}
+
+\label{tab:ten}
+
+\scriptsize
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+
+\hline
+
+ID&Temp&Hum&PH&Rain&Light&Wind&Crop&Soil&Status\\
+
+\hline
+
+1&30&70&6.5&Yes&High&Low&Rice&Wet&Good\\
+
+2&28&75&6.8&No&High&Low&Corn&Dry&Normal\\
+
+3&29&80&6.7&Yes&Medium&Low&Rice&Wet&Good\\
+
+\hline
+
+\end{tabular}
+
+\end{table}
+\subsection{Merge Columns}
+
+\begin{table}[h]
+
+\centering
+
+\caption{Merge Two Columns}
+\label{tab:mergecolumn}
+
+\begin{tabular}{|c|c|c|}
+
+\hline
+
+\multicolumn{2}{|c|}{AI Information}&Result\\
+
+\hline
+
+Model&Accuracy&Excellent\\
+
+\hline
+
+CNN&95\%&Good\\
+
+\hline
+
+\end{tabular}
+
+\end{table}
+\subsection{Merge Rows}
+
+\begin{table}[h]
+
+\centering
+
+\caption{Merge Rows}
+\label{tab:mergerow}
+
+\begin{tabular}{|c|c|}
+
+\hline
+
+\multirow{2}{*}{Rice}
+
+&Healthy\\
+
+\cline{2-2}
+
+&Disease\\
+
+\hline
+
+Corn&Healthy\\
+
+\hline
+
+\end{tabular}
+
+\end{table}
+
+
+\subsection{Long Table}
+
+\begin{center}
+
+\small
+
+\begin{longtable}{|c|p{8cm}|}
+
+\caption{Long Table Example}
+\label{tab:long}\\
+
+\hline
+
+No.&Description\\
+
+\hline
+
+\endfirsthead
+
+\hline
+
+No.&Description\\
+
+\hline
+
+\endhead
+
+1&Artificial Intelligence improves farming productivity.\\
+
+2&Machine learning predicts crop yield.\\
+
+3&Computer vision detects diseases.\\
+
+4&IoT monitors environmental conditions.\\
+
+5&Deep learning classifies plant images.\\
+
+6&AI reduces labor costs.\\
+
+7&Smart farming improves efficiency.\\
+
+8&Sensors collect real-time data.\\
+
+9&Autonomous robots assist farmers.\\
+
+10&Cloud computing stores agricultural data.\\
+
+11&Precision farming saves water resources.\\
+
+12&Satellite images monitor crop growth.\\
+
+13&Weather prediction helps planning.\\
+
+14&AI supports sustainable agriculture.\\
+
+15&Decision support systems improve management.\\
+
+\hline
+
+\end{longtable}
+
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figures}
+\label{sec:figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This section demonstrates how to insert figures in LaTeX.
+
+Figure~\ref{fig:subfigures} shows six example images used in this paper.
+
+The images can represent agricultural monitoring, crop diseases, drones, AI systems, IoT sensors, and smart farming.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=0.6\textwidth]{figures/figure1.jpg}
+
+\caption{Artificial Intelligence in Smart Agriculture}
+
+\label{fig:architecture}
+
+\end{figure}
+
+\begin{figure}[H]
+
+\centering
+
+%---------------- Row 1 ----------------
+
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure1.jpg}
+\caption{Drone}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure2.jpg}
+\caption{Rice Field}
+\end{subfigure}
+
+\vspace{0.4cm}
+
+%---------------- Row 2 ----------------
+
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure3.jpg}
+\caption{Leaf Disease}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure4.jpg}
+\caption{Smart Irrigation}
+\end{subfigure}
+
+\vspace{0.4cm}
+
+%---------------- Row 3 ----------------
+
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure5.jpg}
+\caption{Agricultural Robot}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{figures/figure6.jpg}
+\caption{IoT Sensors}
+\end{subfigure}
+
+\caption{Examples of Artificial Intelligence Applications in Agriculture}
+
+\label{fig:subfigures}
+
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cross References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Figure~\ref{fig:architecture} presents the general architecture of an AI-based smart agriculture system.
+
+Figure~\ref{fig:subfigures} illustrates six common applications of Artificial Intelligence in agriculture.
+
+Table~\ref{tab:two} describes basic AI applications.
+
+Table~\ref{tab:five} compares several AI models.
+
+Table~\ref{tab:ten} presents agricultural sensor data.
+
+Equation~\ref{eq:accuracy} calculates classification accuracy.
+
+Equation~\ref{eq:two} represents a two-equation system.
+
+Equation~\ref{eq:three} represents a three-equation system.
+
+Section~\ref{sec:introduction} introduces the research background.
+
+Section~\ref{sec:application} explains AI applications in agriculture.
+
+Section~\ref{sec:table} demonstrates different table types.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Algorithm~\ref{alg:training} presents a simple machine learning workflow for crop disease detection.
+
+\begin{algorithm}[H]
+\caption{Crop Disease Detection}
+\label{alg:training}
+
+\begin{algorithmic}[1]
+
+\State Collect crop images
+\State Preprocess the images
+\State Split dataset into training and testing sets
+\State Train the AI model
+\State Evaluate model accuracy
+\State Predict crop disease
+
+\end{algorithmic}
+
+\end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{URL Demonstration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The official website of Springer Nature is
+
+\url{https://www.springernature.com}
+
+The official website of IEEE is
+
+\url{https://ieee.org}
+
+Example of a long URL that automatically wraps across lines:
+
+\url{https://www.example.com/artificial-intelligence-in-smart-agriculture/deep-learning-for-crop-disease-detection/very-long-example-url-for-latex-demonstration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Artificial Intelligence is becoming one of the most important technologies in modern agriculture. Machine learning, deep learning, computer vision, and Internet of Things technologies improve crop monitoring, disease detection, irrigation management, and production efficiency.
+
+This paper introduced the basic concepts of AI in Smart Agriculture while demonstrating fundamental LaTeX techniques including text formatting, lists, mathematical equations, tables, figures, cross references, algorithms, URLs, and bibliography management.
+
+Future work may include larger datasets, advanced deep learning models, and autonomous agricultural robots for sustainable farming.
+
+Future smart agriculture will increasingly depend on AI technologies
+\cite{journal10,conf10,book10}.
+
+
+\bibliography{sn-bibliography}
+
+\bibliographystyle{sn-basic}
+
+\bibliography{references}
+
+
+
+\end{document}
